@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  beacon_id: 1
+  user_id: 1
+  place_id: 1
+  temperature: 1
+
+two:
+  beacon_id: 1
+  user_id: 1
+  place_id: 1
+  temperature: 1

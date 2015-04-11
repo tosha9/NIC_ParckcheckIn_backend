@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150411202918) do
+ActiveRecord::Schema.define(version: 20150411203642) do
 
   create_table "beacons", force: :cascade do |t|
     t.string   "uuid",       limit: 255
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 20150411202918) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.string   "message",    limit: 255
+  end
+
+  create_table "checkins", force: :cascade do |t|
+    t.integer  "beacon_id",   limit: 4
+    t.integer  "user_id",     limit: 4
+    t.integer  "place_id",    limit: 4
+    t.integer  "temperature", limit: 4
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
   create_table "users", force: :cascade do |t|

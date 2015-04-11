@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Checkins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Beacon</th>
+      <th>User</th>
+      <th>Place</th>
+      <th>Temperature</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @checkins.each do |checkin| %>
+      <tr>
+        <td><%= checkin.beacon_id %></td>
+        <td><%= checkin.user_id %></td>
+        <td><%= checkin.place_id %></td>
+        <td><%= checkin.temperature %></td>
+        <td><%= link_to 'Show', checkin %></td>
+        <td><%= link_to 'Edit', edit_checkin_path(checkin) %></td>
+        <td><%= link_to 'Destroy', checkin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Checkin', new_checkin_path %>
