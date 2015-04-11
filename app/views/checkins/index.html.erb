@@ -16,7 +16,7 @@
   <tbody>
     <% @checkins.each do |checkin| %>
       <tr>
-        <td><%= checkin.beacon_id %></td>
+        <td><%= checkin.beacon.uuid %></td>
         <td><%= checkin.user_id %></td>
         <td><%= checkin.place_id %></td>
         <td><%= checkin.temperature %></td>
